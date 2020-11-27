@@ -17,10 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', 'TemplatesController@index');
 
-Route::get('/products', 'ProductsController@index');
 
 
 Route::get('/stores','storesController@index');
 Route::get('/stores/{store}','storesController@show');
+Route::get('/products', 'ProductsController@index');
+Route::get('/products/{product}/edit', 'ProductsController@edit');
+Route::put('/products/{product}', 'ProductsController@update');
+Route::get('/product-details', 'ProductsController@details');

@@ -2,27 +2,22 @@
 @section('content')
 
 <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">COMPANY C STORES BRANCH</h1>
-      <div class="row center">
-       <!--  <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
- -->      </div>
-      <br><br>
-  
-  
-<div class ="row">
-    <ul>
+  <div class="container">
+    <br><br>
+    <h1 class="header center red-text">COMPANY C STORES BRANCH</h1>
+    <br><br>
+    <div class="icon-block">
+      <div class="row">
         @foreach ($stores as $store)
-        <li>
-        <a href="/stores/{{$store->id}}">
-            {{$store->name}}
-        </a>
-        </li>
+        <center>
+          <div class="col m4">
+            <a href="/stores/{{$store->id}}" class="btn-large waves-effect waves-light light-blue ">{{$store->name}} </a>
+          </div>
+        </center>
         @endforeach
-    </ul>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </div>
 @endsection
 
